@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  background-color: rgba(var(--error-rgb), 0.1);
+  border-radius: 4px;
+} 

@@ -1,0 +1,248 @@
+.pricing {
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+
+  .badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(247, 165, 1, 0.2);
+  }
+
+  h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--text-color-lighter);
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+}
+
+.plansContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.plan {
+  background: var(--surface-color);
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--border-light);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.popular {
+    border-color: var(--primary-color);
+    background: var(--card-background);
+    box-shadow: 0 8px 30px rgba(247, 165, 1, 0.15);
+    transform: scale(1.05);
+
+    &:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+  }
+}
+
+.popularBadge,
+.savingsBadge {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(247, 165, 1, 0.2);
+}
+
+.popularBadge {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+.savingsBadge {
+  top: 1rem;
+  right: -8px;
+  background: var(--card-background);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.planHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.billingNote {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 1.5rem 0;
+
+  .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+
+  .amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-color-lighter);
+    line-height: 1;
+  }
+
+  .cycle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.features {
+  list-style: none;
+  text-align: left;
+  margin: 2rem 0;
+  flex-grow: 1;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+
+    .checkmark {
+      color: var(--primary-color);
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: rgba(247, 165, 1, 0.1);
+      border-radius: 50%;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.ctaButton {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .buttonIcon {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .buttonIcon {
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .plansContainer {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .plan.popular {
+    transform: none;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 4rem 1.5rem;
+  }
+
+  .header {
+    h2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .plan {
+    padding: 2rem;
+  }
+
+  .price .amount {
+    font-size: 3rem;
+  }
+}

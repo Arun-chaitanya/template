@@ -1,0 +1,1 @@
+export { UniversitySOPList } from './UniversitySOPList';

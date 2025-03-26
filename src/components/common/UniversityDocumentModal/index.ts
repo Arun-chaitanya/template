@@ -1,0 +1,1 @@
+export { UniversityDocumentModal } from './UniversityDocumentModal';

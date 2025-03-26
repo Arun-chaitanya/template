@@ -1,0 +1,72 @@
+:root {
+  --font-display: 'Funnel Display', system-ui, sans-serif;
+  --font-sans: 'Funnel Sans', system-ui, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+
+  --primary-color: #f7a501;
+  --secondary-color: #35373d;
+  --background-color: #1d1f27;
+  --surface-color: #282a30;
+  --text-color: #e5e7eb;
+  --text-muted: #9ba1a6;
+  --border-light: #383a3f;
+  --nav-hover: rgba(255, 255, 255, 0.06);
+  --card-background: #2d2f36;
+  --background-color-dark: #1a1b1e;
+  --background-color-darker: #2c2e33;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-color-light: #e1e1e1;
+  --text-color-lighter: #ffffff;
+  --header-height: 60px;
+  --footer-height: 6rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+html,
+body {
+  max-width: 100vw;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings:
+    'ss01' 1,
+    'ss02' 1,
+    'ss03' 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}

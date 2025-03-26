@@ -1,0 +1,30 @@
+
+.main {
+  display: block;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.footer {
+  opacity: 0;
+  transform: translateY(100%);
+  visibility: hidden;
+  transition: all 0.3s ease;
+  margin-top: auto;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
