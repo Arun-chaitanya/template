@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { SessionProvider } from "@/components/providers/SessionProvider";
-import "@/styles/scss/globals.scss";
+import "@/styles/main.scss";
 import { MainLayout } from '@/components/layout/MainLayout';
 
 const robotoMono = Roboto_Mono({

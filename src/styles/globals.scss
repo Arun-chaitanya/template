@@ -1,0 +1,119 @@
+// Global variables
+:root {
+  // Font settings
+  --font-display: 'Funnel Display', system-ui, sans-serif;
+  --font-sans: 'Funnel Sans', system-ui, sans-serif;
+  --font-mono: monospace;
+
+  // Base theme colors
+  --primary: #4D33FF;
+  --primary-rgb: 77, 51, 255;
+  --primary-dark: #3721E3;
+  --primary-darker: #2B1AB3;
+  
+  --success: #52c41a;
+  --success-rgb: 82, 196, 26;
+  
+  --warning: #faad14;
+  --warning-rgb: 250, 173, 20;
+  
+  --danger: #ff4d4f;
+  --danger-rgb: 255, 77, 79;
+  --danger-dark: #E03C3E;
+  --danger-darker: #B62F31;
+  
+  // Text colors
+  --text-default: #2d2d2d;
+  --text-muted: #8c8c8c;
+  --text-color: #e5e7eb;
+  --text-color-light: #e1e1e1;
+  --text-color-lighter: #ffffff;
+  
+  // Background colors
+  --background: #ffffff;
+  --foreground: #171717;
+  --background-color: #1d1f27;
+  --background-color-dark: #1a1b1e;
+  --background-color-darker: #2c2e33;
+  --surface-color: #282a30;
+  --card-background: #2d2f36;
+  
+  // UI element colors
+  --bg-light: #ffffff;
+  --bg-mid: #f0f0f0;
+  --bg-mid-light: #f5f5f5;
+  --bg-disabled: #f5f5f5;
+  --bg-transparent: transparent;
+  
+  // Border colors
+  --border: #d9d9d9;
+  --border-light: #383a3f;
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  // Navigation colors
+  --nav-hover: rgba(255, 255, 255, 0.06);
+  
+  // Layout measurements
+  --header-height: 60px;
+  --footer-height: 6rem;
+}
+
+// Dark mode overrides
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+// Base element styles
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+html,
+body {
+  max-width: 100vw;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings:
+    'ss01' 1,
+    'ss02' 1,
+    'ss03' 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Utility classes
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+} 

@@ -1,1 +1,0 @@
-export { SOPOverview } from './SOPOverview';
