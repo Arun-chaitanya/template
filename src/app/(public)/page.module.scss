@@ -1,8 +1,6 @@
 .landing {
-  min-height: 100vh;
-  background-color: var(--background-color);
-  
-  section {
-    scroll-margin-top: 5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 4rem;
 } 

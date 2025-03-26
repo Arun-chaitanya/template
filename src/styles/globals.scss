@@ -56,6 +56,20 @@
   // Layout measurements
   --header-height: 60px;
   --footer-height: 6rem;
+  
+  // Z-index system
+  --z-index-base: 1;
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-popover: 1040;
+  --z-index-tooltip: 1050;
+  --z-index-toast: 1060;
+  --z-index-modal-backdrop: 1070;
+  --z-index-modal: 1080;
+  --z-index-notification: 1090;
+  --z-index-spinner: 1100;
+  --z-index-max: 9999;
 }
 
 // Dark mode overrides

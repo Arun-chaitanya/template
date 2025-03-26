@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
   
   // Header containing tabs
   &-header {
@@ -10,6 +11,8 @@
     align-items: center;
     margin-bottom: 16px;
     border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: var(--z-index-sticky);
   }
   
   // List of tabs
@@ -33,6 +36,8 @@
   // Tab content area
   &-content {
     flex: 1;
+    position: relative;
+    z-index: var(--z-index-base);
   }
   
   // Size variations
@@ -132,6 +137,7 @@
   &-active {
     color: var(--primary);
     font-weight: 600;
+    z-index: var(--z-index-base);
     
     &:after {
       content: '';
@@ -141,6 +147,7 @@
       width: 100%;
       height: 2px;
       background-color: var(--primary);
+      z-index: var(--z-index-base);
     }
   }
   

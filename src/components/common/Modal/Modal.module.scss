@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: var(--z-index-modal-backdrop);
   overflow-y: auto;
   padding: 16px;
   animation: modal-backdrop-in 0.2s ease forwards;
@@ -25,6 +25,7 @@
   overflow: hidden;
   position: relative;
   margin: auto;
+  z-index: var(--z-index-modal);
   animation: modal-in 0.2s ease forwards;
   
   // Visibility states
@@ -50,7 +51,7 @@
   &-inline {
     position: relative;
     max-height: none;
-    z-index: 0;
+    z-index: var(--z-index-base);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
   

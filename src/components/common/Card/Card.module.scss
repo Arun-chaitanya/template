@@ -7,6 +7,8 @@
   flex-direction: column;
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  z-index: var(--z-index-base);
   
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -92,6 +94,8 @@
     align-items: center;
     padding: 16px;
     border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: var(--z-index-base);
     
     &-content {
       flex: 1;
@@ -122,6 +126,8 @@
     align-items: center;
     padding: 16px;
     border-top: 1px solid var(--border);
+    position: relative;
+    z-index: var(--z-index-base);
     
     &-content {
       flex: 1;
